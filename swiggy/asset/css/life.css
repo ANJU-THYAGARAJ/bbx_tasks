@@ -1,0 +1,1569 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* Import FontAwesome for Social Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+.swiggy-header {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Styling */
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 45px;
+  width: auto;
+}
+
+/* Navigation Links Styling */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #3d4152;
+  font-size: 15px;
+  font-weight: 400;
+  padding-bottom: 6px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+  color: #fc8019;
+}
+
+/* Active Link State with Orange Bottom Border */
+.nav-item.active {
+  color: #fc8019;
+  font-weight: 500;
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fc8019;
+  border-radius: 2px;
+}
+
+/* Social Media Icons Styling */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.social-links a {
+  color: #000000;
+  font-size: 17px;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #fc8019;
+  transform: translateY(-1px);
+}
+
+/* Responsive Scaling for Smaller Screens */
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-item {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    display: none; /* Hide social icons on mobile */
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #282c3f;
+  background-color: #ffffff;
+}
+
+/* Container Wrapper */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #282c3f;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.life-hero-section {
+  position: relative;
+  width: 100%;
+  /* Fixed Aspect Ratio matching the exact banner proportions */
+  aspect-ratio: 16 / 6.5; 
+  min-height: 240px;
+  max-height: 580px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Image background container */
+.hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  /* Ensures the artwork fills the exact space without stretching */
+  object-fit: cover; 
+  /* Focus center to keep the team members and mural art balanced */
+  object-position: center 40%; 
+  display: block;
+}
+
+/* Dark gradient overlay for text readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    rgba(0, 0, 0, 0.45) 0%, 
+    rgba(0, 0, 0, 0.2) 50%, 
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
+/* Content positioning over background */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding-left: 5%; /* Offset text matching the exact position in screenshot */
+}
+
+.hero-title {
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 1.25;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  margin: 0;
+}
+
+.hero-title .highlight {
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   2. WORK AND LIFE @ SWIGGY HEADING
+   ========================================================================== */
+
+.work-life-section {
+  padding: 40px 0 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-weight: 300;
+  color: #282c3f;
+  letter-spacing: 0.5px;
+}
+
+.section-title .brand-text {
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   3. BREAKPOINTS & RESPONSIVE SCALING
+   ========================================================================== */
+
+/* --- Mobile (320px to 767px) --- */
+@media screen and (min-width: 320px) {
+  .life-hero-section {
+    aspect-ratio: 16 / 10; /* Taller banner ratio on phones */
+  }
+
+  .hero-content-wrapper {
+    padding-left: 0;
+  }
+
+  .hero-title {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+}
+
+/* --- Tablet (768px and above) --- */
+@media screen and (min-width: 768px) {
+  .life-hero-section {
+    aspect-ratio: 16 / 7.5;
+  }
+
+  .hero-content-wrapper {
+    padding-left: 3%;
+  }
+
+  .hero-title {
+    font-size: 34px;
+    letter-spacing: 1px;
+  }
+
+  .work-life-section {
+    padding: 60px 0 30px;
+  }
+
+  .section-title {
+    font-size: 38px;
+  }
+}
+
+/* --- Laptop (1024px and above) --- */
+@media screen and (min-width: 1024px) {
+  .life-hero-section {
+    aspect-ratio: 16 / 6.5;
+  }
+
+  .hero-content-wrapper {
+    padding-left: 6%;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    letter-spacing: 1.2px;
+  }
+
+  .work-life-section {
+    padding: 70px 0 35px;
+  }
+
+  .section-title {
+    font-size: 46px;
+  }
+}
+
+/* --- Desktop (1440px and above) --- */
+@media screen and (min-width: 1440px) {
+  .life-hero-section {
+    aspect-ratio: 16 / 6.2;
+    max-height: 600px;
+  }
+
+  .hero-content-wrapper {
+    padding-left: 8%;
+  }
+
+  .hero-title {
+    font-size: 52px;
+    letter-spacing: 1.5px;
+  }
+
+  .work-life-section {
+    padding: 85px 0 40px;
+  }
+
+  .section-title {
+    font-size: 52px;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #282c3f;
+  background-color: #ffffff;
+}
+
+/* Base Layout Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Section Header */
+.work-life-section {
+  padding: 40px 0 60px;
+  background-color: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+  color: #282c3f;
+  margin-bottom: 40px;
+}
+
+.section-title span {
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   1. MOBILE FIRST STYLES (320px and above)
+   ========================================================================== */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 30px;
+}
+
+.story-card {
+  background-color: #f8f9fa;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 24px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: #3d4152;
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+
+.card-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #686b78;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1; /* Pushes button to bottom */
+}
+
+.card-btn {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #fc8019; /* Swiggy Orange */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 28px;
+  border-radius: 25px;
+  transition: background-color 0.2s ease;
+}
+
+.card-btn:hover {
+  background-color: #e26f12;
+}
+
+/* ==========================================================================
+   2. TABLET BREAKPOINT (768px and above)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .section-title {
+    font-size: 38px;
+    margin-bottom: 50px;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    gap: 24px;
+  }
+
+  .card-content {
+    padding: 28px 24px 32px;
+  }
+
+  .card-title {
+    font-size: 22px;
+  }
+}
+
+/* ==========================================================================
+   3. LAPTOP BREAKPOINT (1024px and above)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+  .section-title {
+    font-size: 44px;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns matching desktop design */
+    gap: 28px;
+  }
+
+  .card-title {
+    font-size: 21px;
+    min-height: 58px; /* Standardizes header height across cards */
+  }
+
+  .card-description {
+    font-size: 13.5px;
+  }
+}
+
+/* ==========================================================================
+   4. DESKTOP BREAKPOINT (1440px and above)
+   ========================================================================== */
+@media screen and (min-width: 1440px) {
+  .work-life-section {
+    padding: 60px 0 80px;
+  }
+
+  .section-title {
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+
+  .cards-grid {
+    gap: 32px;
+  }
+
+  .card-content {
+    padding: 32px 28px 36px;
+  }
+
+  .card-title {
+    font-size: 23px;
+    min-height: 64px;
+  }
+
+  .card-description {
+    font-size: 14px;
+  }
+
+  .card-btn {
+    font-size: 15px;
+    padding: 12px 32px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #3d4152;
+  background-color: #ffffff;
+}
+
+/* Section Wrapper */
+.benefits-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa; 
+}
+
+.benefits-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Left Column: Heading & Text */
+.benefits-text-col {
+  width: 100%;
+}
+
+.benefits-title {
+  font-size: 32px;
+  font-weight: 300;
+  color: #111111;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.benefits-title span {
+  font-weight: 600;
+}
+
+.benefits-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #686b78;
+  line-height: 1.7;
+}
+
+/* Right Column: Benefits Grid */
+.benefits-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 1 column on smallest mobile screens */
+  gap: 30px 20px;
+}
+
+/* Individual Benefit Item */
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.benefit-icon {
+  font-size: 38px;
+  color: #fc8019; /* Swiggy Signature Orange */
+  margin-bottom: 12px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.benefit-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #3d4152;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* --- Mobile (480px and above) --- */
+@media screen and (min-width: 480px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile landcapes */
+  }
+}
+
+/* --- Tablet (768px and above) --- */
+@media screen and (min-width: 768px) {
+  .benefits-container {
+    padding: 20px 0;
+  }
+
+  .benefits-title {
+    font-size: 38px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on tablet */
+    gap: 40px 30px;
+  }
+}
+
+/* --- Laptop / Desktop (1024px and above) --- */
+@media screen and (min-width: 1024px) {
+  .benefits-section {
+    padding: 80px 40px;
+  }
+
+  .benefits-container {
+    flex-direction: row; /* Split into side-by-side columns */
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .benefits-text-col {
+    width: 38%; /* 38% left column width */
+  }
+
+  .benefits-grid {
+    width: 62%; /* 62% right grid width */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 35px;
+  }
+
+  .benefits-title {
+    font-size: 42px;
+  }
+
+  .benefits-description {
+    font-size: 15px;
+  }
+}
+
+/* --- Large Desktop (1440px and above) --- */
+@media screen and (min-width: 1440px) {
+  .benefits-section {
+    padding: 100px 0;
+  }
+
+  .benefits-container {
+    gap: 80px;
+  }
+
+  .benefits-title {
+    font-size: 48px;
+  }
+
+  .benefit-icon {
+    font-size: 42px;
+  }
+
+  .benefit-label {
+    font-size: 15px;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #3d4152;
+  background-color: #ffffff;
+}
+
+/* Main Section Wrapper */
+.swiggy-bytes-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.swiggy-bytes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Left Image Column */
+.bytes-image-col {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #1e222d; /* Dark background matching Swiggy Bytes artwork */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bytes-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Crops the edges while keeping image filled */
+  object-position: center;
+  display: block;
+  object-fit: cover;
+}
+
+/* Right Content Column */
+.bytes-content-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bytes-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fc8019; /* Swiggy Orange */
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.bytes-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #686b78;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Button Styling */
+.bytes-btn {
+  display: inline-block;
+  background-color: #fc8019;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 36px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bytes-btn:hover {
+  background-color: #e26f12;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* --- Mobile (320px to 767px) --- */
+@media screen and (min-width: 320px) {
+  .bytes-title {
+    font-size: 24px;
+  }
+}
+
+/* --- Tablet (768px and above) --- */
+@media screen and (min-width: 768px) {
+  .swiggy-bytes-section {
+    padding: 80px 30px;
+  }
+
+  .bytes-title {
+    font-size: 32px;
+  }
+
+  .bytes-description {
+    font-size: 15px;
+  }
+}
+
+/* --- Laptop (1024px and above) --- */
+@media screen and (min-width: 1024px) {
+  .swiggy-bytes-container {
+    flex-direction: row; /* Side-by-side layout */
+    gap: 50px;
+    align-items: center;
+  }
+
+  .bytes-image-col {
+    width: 50%;
+  }
+
+  .bytes-content-col {
+    width: 50%;
+  }
+
+  .bytes-title {
+    font-size: 36px;
+  }
+}
+
+/* --- Desktop (1440px and above) --- */
+@media screen and (min-width: 1440px) {
+  .swiggy-bytes-section {
+    padding: 100px 0;
+  }
+
+  .swiggy-bytes-container {
+    gap: 70px;
+  }
+
+  .bytes-title {
+    font-size: 42px;
+  }
+
+  .bytes-description {
+    font-size: 16px;
+  }
+
+  .bytes-btn {
+    font-size: 16px;
+    padding: 14px 42px;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #3d4152;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   1. TOP SOCIAL HEADER SECTION
+   ========================================================================== */
+.social-header-section {
+  padding: 50px 0 30px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.social-title {
+  font-size: 26px;
+  font-weight: 300;
+  color: #282c3f;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.social-title span {
+  font-weight: 700;
+}
+
+.social-subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  color: #686b78;
+  letter-spacing: 0.3px;
+}
+
+/* ==========================================================================
+   2. PERKS SPLIT SECTION (Mobile First: 320px+)
+   ========================================================================== */
+.perks-section {
+  padding: 40px 0 60px;
+  background-color: #ffffff;
+}
+
+.perks-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* --- Left Column: Text Content --- */
+.perks-text-col {
+  width: 100%;
+}
+
+.perks-title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #282c3f;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.perks-title .highlight {
+  font-weight: 700;
+}
+
+.perks-description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #686b78;
+  line-height: 1.7;
+}
+
+/* --- Right Column: Orange Pills --- */
+.perks-pills-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.perk-pill {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 1px solid #fc8019; /* Swiggy Signature Orange */
+  border-radius: 30px;
+  color: #fc8019;
+  font-size: 13.5px;
+  font-weight: 400;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+  white-space: normal; /* Allows wrapping on small phone screens */
+}
+
+.perk-pill:hover {
+  background-color: #fc8019;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   3. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* --- Tablet (768px and above) --- */
+@media screen and (min-width: 768px) {
+  .social-header-section {
+    padding: 70px 0 40px;
+  }
+
+  .social-title {
+    font-size: 38px;
+  }
+
+  .social-subtitle {
+    font-size: 18px;
+  }
+
+  .perks-section {
+    padding: 50px 0 80px;
+  }
+
+  .perks-title {
+    font-size: 34px;
+  }
+
+  .perks-description {
+    font-size: 15px;
+  }
+
+  .perk-pill {
+    font-size: 14px;
+    padding: 11px 28px;
+  }
+}
+
+/* --- Laptop (1024px and above) - Split 2-Column Layout with Divider --- */
+@media screen and (min-width: 1024px) {
+  .social-header-section {
+    padding: 85px 0 45px;
+  }
+
+  .social-title {
+    font-size: 44px;
+  }
+
+  .perks-wrapper {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .perks-text-col {
+    width: 50%;
+    padding-right: 20px;
+  }
+
+  /* Vertical Border Divider separating left text and right pills */
+  .perks-pills-col {
+    width: 50%;
+    padding-left: 50px;
+    border-left: 1px solid #e2e5ed; 
+    gap: 14px;
+  }
+
+  .perks-title {
+    font-size: 38px;
+  }
+
+  .perk-pill {
+    white-space: nowrap; /* Keeps pills clean on desktop */
+  }
+}
+
+/* --- Desktop (1440px and above) --- */
+@media screen and (min-width: 1440px) {
+  .social-header-section {
+    padding: 100px 0 50px;
+  }
+
+  .social-title {
+    font-size: 48px;
+  }
+
+  .social-subtitle {
+    font-size: 20px;
+  }
+
+  .perks-section {
+    padding: 60px 0 100px;
+  }
+
+  .perks-wrapper {
+    gap: 80px;
+  }
+
+  .perks-text-col {
+    padding-right: 40px;
+  }
+
+  .perks-pills-col {
+    padding-left: 70px;
+    gap: 16px;
+  }
+
+  .perks-title {
+    font-size: 42px;
+  }
+
+  .perks-description {
+    font-size: 16px;
+  }
+
+  .perk-pill {
+    font-size: 15px;
+    padding: 12px 32px;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #282c3f;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   1. TALENT SHOWCASE HERO BANNER
+   ========================================================================== */
+
+.talent-showcase-section {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 6.5;
+  min-height: 280px;
+  max-height: 580px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.showcase-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.showcase-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+/* Gradient overlay to increase text legibility on left side */
+.showcase-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    rgba(0, 0, 0, 0.5) 0%, 
+    rgba(0, 0, 0, 0.25) 45%, 
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.showcase-content-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.showcase-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.showcase-subtitle {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   2. "WHAT IS LIFE AT SWIGGY LIKE?" SECTION HEADER
+   ========================================================================== */
+
+.life-at-swiggy-section {
+  padding: 40px 0 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.life-title {
+  font-size: 28px;
+  font-weight: 300;
+  color: #282c3f;
+  letter-spacing: 0.5px;
+}
+
+.life-title span {
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   3. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* --- Mobile (320px to 767px) --- */
+@media screen and (min-width: 320px) {
+  .talent-showcase-section {
+    aspect-ratio: 16 / 9;
+  }
+
+  .showcase-title {
+    font-size: 22px;
+  }
+
+  .showcase-subtitle {
+    font-size: 13px;
+  }
+
+  .life-title {
+    font-size: 26px;
+  }
+}
+
+/* --- Tablet (768px and above) --- */
+@media screen and (min-width: 768px) {
+  .talent-showcase-section {
+    aspect-ratio: 16 / 7.5;
+  }
+
+  .showcase-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .showcase-subtitle {
+    font-size: 16px;
+  }
+
+  .life-at-swiggy-section {
+    padding: 60px 0 30px;
+  }
+
+  .life-title {
+    font-size: 38px;
+  }
+}
+
+/* --- Laptop (1024px and above) --- */
+@media screen and (min-width: 1024px) {
+  .talent-showcase-section {
+    aspect-ratio: 16 / 6.5;
+  }
+
+  .showcase-title {
+    font-size: 46px;
+    margin-bottom: 24px;
+  }
+
+  .showcase-subtitle {
+    font-size: 18px;
+  }
+
+  .life-at-swiggy-section {
+    padding: 70px 0 35px;
+  }
+
+  .life-title {
+    font-size: 44px;
+  }
+}
+
+/* --- Desktop (1440px and above) --- */
+@media screen and (min-width: 1440px) {
+  .talent-showcase-section {
+    aspect-ratio: 16 / 6;
+    max-height: 600px;
+  }
+
+  .showcase-title {
+    font-size: 54px;
+  }
+
+  .showcase-subtitle {
+    font-size: 20px;
+  }
+
+  .life-at-swiggy-section {
+    padding: 85px 0 40px;
+  }
+
+  .life-title {
+    font-size: 50px;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #282c3f;
+  background-color: #ffffff;
+}
+
+/* ==========================================================================
+   1. TESTIMONIAL SECTION
+   ========================================================================== */
+
+.testimonial-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.testimonial-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Avatar Image */
+.avatar-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Slider Controls & Text Layout */
+.quote-slider-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.quote-content {
+  flex-grow: 1;
+  max-width: 680px;
+}
+
+.quote-text {
+  font-size: 15px;
+  font-weight: 300;
+  color: #3d4152;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.read-more-link {
+  color: #fc8019; /* Swiggy Orange */
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.read-more-link:hover {
+  text-decoration: underline;
+}
+
+/* Arrow Navigation Buttons */
+.nav-arrow {
+  background: transparent;
+  border: none;
+  color: #f7a059; /* Soft Orange Chevron */
+  font-size: 28px;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.nav-arrow:hover {
+  color: #fc8019;
+  transform: scale(1.15);
+}
+
+/* Author Text Details */
+.author-info {
+  margin-top: 10px;
+}
+
+.author-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fc8019;
+  margin-bottom: 6px;
+}
+
+.author-dept {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3d4152;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   2. FOOTER SECTION
+   ========================================================================== */
+
+.main-footer {
+  background-color: #4b38b3; /* Deep Swiggy Purple Footer */
+  padding: 40px 20px 30px;
+  color: #ffffff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Navigation Links */
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 30px;
+}
+
+.footer-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+.footer-nav a:hover {
+  opacity: 0.8;
+}
+
+/* Social Media Icons */
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.footer-socials a {
+  color: #ffffff;
+  font-size: 20px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-socials a:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   3. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* --- Mobile (320px to 767px) --- */
+@media screen and (min-width: 320px) {
+  .quote-text {
+    font-size: 14px;
+  }
+
+  .nav-arrow {
+    font-size: 22px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+}
+
+/* --- Tablet (768px and above) --- */
+@media screen and (min-width: 768px) {
+  .testimonial-section {
+    padding: 80px 30px;
+  }
+
+  .avatar-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .quote-text {
+    font-size: 16px;
+  }
+
+  .nav-arrow {
+    font-size: 32px;
+    padding: 12px;
+  }
+
+  .author-name {
+    font-size: 20px;
+  }
+
+  .footer-nav {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+/* --- Laptop (1024px and above) --- */
+@media screen and (min-width: 1024px) {
+  .testimonial-section {
+    padding: 100px 40px;
+  }
+
+  .quote-text {
+    font-size: 17px;
+  }
+
+  .author-name {
+    font-size: 22px;
+  }
+
+  .footer-nav {
+    gap: 40px;
+  }
+
+  .footer-nav a {
+    font-size: 15px;
+  }
+
+  .footer-socials a {
+    font-size: 22px;
+  }
+}
+
+/* --- Desktop (1440px and above) --- */
+@media screen and (min-width: 1440px) {
+  .testimonial-section {
+    padding: 120px 0;
+  }
+
+  .avatar-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .quote-text {
+    font-size: 18px;
+  }
+
+  .author-name {
+    font-size: 24px;
+  }
+}

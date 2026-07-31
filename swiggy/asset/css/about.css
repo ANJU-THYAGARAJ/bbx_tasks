@@ -1,0 +1,868 @@
+/* ================= NAVBAR ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.navbar{
+    height:90px;
+    background:#fff;
+    padding:0;
+    /* font-family: 'Montserrat', sans-serif; */
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.logo{
+    width:150px;
+}
+
+.navbar-nav{
+    gap:20px;
+}
+
+.nav-link{
+    position:relative;
+    color:#222 !important;
+    font-size:18px;
+    font-weight:500;
+    padding:32px 0;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#fc8019 !important;
+}
+
+.nav-link.active{
+    color:#fc8019 !important;
+}
+
+.nav-link.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:18px;
+    width:100%;
+    height:3px;
+    background:#fc8019;
+    border-radius:10px;
+}
+
+.social-icons{
+    gap:25px;
+}
+
+.social-icons a{
+    color:#000;
+    font-size:30px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    color:#fc8019;
+}
+
+@media (max-width:991px){
+
+.navbar{
+    height:auto;
+    padding:15px 0;
+}
+
+.navbar-nav{
+    gap:0;
+    margin-top:20px;
+}
+
+.nav-link{
+    padding:12px 0;
+}
+
+.nav-link.active::after{
+    display:none;
+}
+
+.social-icons{
+    justify-content:center;
+    margin-top:20px;
+}
+
+}
+
+
+/* Hero Section Base */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  /* Replace with your local/hosted hero background image */
+  background: url('https://careers.swiggy.com/assets/img/banner3.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 60px 0;
+}
+
+/* Container */
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+}
+
+/* Hero Typography */
+.hero-title {
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin: 0 0 50px 0;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* White Pill Search Box Overlay */
+.search-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 50px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 950px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Input Wrappers for equal proportion */
+.search-input-wrapper,
+.search-select-wrapper {
+  flex: 1;
+}
+
+/* Text Input Styling */
+.search-input {
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+  outline: none;
+  font-size: 14px;
+  color: #3d4152;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.search-input::placeholder {
+  color: #93959f;
+}
+
+/* Dropdown Select Styling */
+.search-select {
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+  outline: none;
+  font-size: 14px;
+  color: #686b78;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  appearance: none; /* Custom arrow look */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%3c686b78' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Search Button Styling */
+.search-btn {
+  background-color: #fc8019; /* Swiggy Orange */
+  color: #ffffff;
+  border: none;
+  padding: 14px 45px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.search-btn:hover {
+  background-color: #e67211;
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .search-box {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .search-input-wrapper,
+  .search-select-wrapper,
+  .search-btn {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+}
+@media(max-width:992px){
+
+.hero{
+
+height:700px;
+
+}
+
+.hero h1{
+
+font-size:50px;
+
+}
+
+.search-box{
+
+border-radius:25px;
+
+}
+
+.icons{
+
+margin-top:20px;
+
+}
+
+}
+
+
+
+.hero{
+
+text-align:center;
+
+height:780px;
+
+}
+
+
+
+.about {
+    padding: 60px 20px;
+    width: 100%;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-text {
+    width: 100%;
+    max-width: 1000px; /* Increased slightly so line 1 doesn't wrap early */
+    margin: 0 auto 35px;
+    text-align: center;
+    font-size: 16px; /* 16px matches the lightweight body text in original */
+    line-height: 1.8;
+    color: #4f5362;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-title {
+    margin: 0;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    margin-right: -8px; /* Offsets the trailing letter-spacing to ensure optical center */
+    color: #111;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.about-title span {
+    font-weight: 700;
+}
+.categories-section {
+  padding: 40px 20px 80px;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container keeps the original 1100px fixed width */
+.categories-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 20px; /* Reduced gap slightly so larger circles fit without widening cards */
+  text-align: center;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+/* Larger Circle Icon Wrapper */
+.icon-wrapper {
+  width: 210px;  /* Scaled up circle size */
+  height: 210px; /* Scaled up circle size */
+  background-color: #f7f7f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; 
+}
+
+.icon-wrapper img {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+}
+
+/* Category Title */
+.category-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #282c3f;
+  letter-spacing: 5px;
+  margin: 0 0 20px 0;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+/* Button Styling */
+.explore-btn {
+  display: inline-block;
+  padding: 8px 30px;
+  border: 1px solid #f2ab87;
+  color: #fc8019;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover,
+.category-card.active .explore-btn {
+  background-color: #fc8019;
+  color: #ffffff;
+  border-color: #fc8019;
+}
+
+.category-card.active .category-title {
+  color: #fc8019;
+}
+
+.featured-jobs-section {
+  background-color: #5333ad; /* Swiggy purple background */
+  padding: 60px 20px 70px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.featured-jobs-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Heading Styling */
+.featured-title {
+  font-size: 38px;
+  font-weight: 300;
+  letter-spacing: 12px;
+  margin: 0 0 50px 0;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.featured-title span {
+  font-weight: 700;
+}
+
+/* Grid Layout (3 Columns) */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 0;
+  margin-bottom: 50px;
+}
+
+/* Individual Job Item Base Styling */
+.job-card {
+  padding: 15px 30px;
+  text-align: left;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  border-radius: 12px;
+  /* Smooth transition for hover effect */
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Removes left border for first column in each row */
+.job-card:nth-child(3n + 1) {
+  border-left-color: transparent;
+  padding-left: 15px;
+}
+
+.job-title {
+  font-size: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.job-location {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* Hover Effect - As shown in screenshot */
+.job-card:hover {
+  background-color: #fc8019; /* Swiggy Orange */
+  border-left-color: transparent; /* Hide left line on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.see-more-btn {
+  display: inline-block;
+  background-color: #fc8019;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px 45px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #e67211;
+  transform: translateY(-2px);
+}
+
+/* Responsive Scaling */
+@media (max-width: 900px) {
+  .jobs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .job-card:nth-child(3n + 1) {
+    border-left-color: rgba(255, 255, 255, 0.4);
+    padding-left: 30px;
+  }
+  .job-card:nth-child(2n + 1) {
+    border-left-color: transparent;
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+  .job-card {
+    border-left-color: transparent;
+    padding-left: 15px;
+  }
+}
+
+
+.gigabytes-section {
+  background-color: #ffffff;
+  padding: 80px 20px 90px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.gigabytes-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Top Subtitle */
+.gigabytes-subtitle {
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 12px;
+  color: #111111;
+  text-transform: uppercase;
+  margin: 0 0 25px 0;
+  margin-right: -12px; /* Offsets trailing letter-spacing to ensure optical center */
+}
+
+/* Main Heading */
+.gigabytes-title {
+  font-size: 52px;
+  font-weight: 700;
+  color: #282c3f;
+  line-height: 1.15;
+  margin: 0 0 30px 0;
+  letter-spacing: -0.5px;
+}
+
+/* Description Text */
+.gigabytes-description {
+  font-size: 16px;
+  font-weight: 300;
+  color: #3d4152;
+  line-height: 1.6;
+  margin: 0 0 40px 0;
+}
+
+/* Tune In Button */
+.tune-in-btn {
+  display: inline-block;
+  background-color: #fc8019; /* Swiggy signature orange */
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px 50px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(252, 128, 25, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tune-in-btn:hover {
+  background-color: #e67211;
+  transform: translateY(-2px);
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+  .gigabytes-subtitle {
+    font-size: 20px;
+    letter-spacing: 8px;
+  }
+
+  .gigabytes-title {
+    font-size: 36px;
+  }
+
+  .gigabytes-description {
+    font-size: 14px;
+  }
+}
+
+
+.swiggy-story-section {
+  position: relative;
+  width: 100%;
+  min-height: 550px;
+  
+  background: url('	https://careers.swiggy.com/assets/img/banner2.jpg') no-repeat center center/cover;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.story-overlay {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+}
+
+.story-container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: left;
+}
+
+.story-title {
+  font-size: 52px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0 0 25px 0;
+  letter-spacing: -0.5px;
+}
+
+.story-description {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.7;
+  max-width: 580px;
+  margin: 0 0 35px 0;
+}
+
+.story-btn {
+  display: inline-block;
+  background-color: #fc8019; 
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px 45px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.story-btn:hover {
+  background-color: #e67211;
+  transform: translateY(-2px);
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 768px) {
+  .swiggy-story-section {
+    min-height: auto;
+  }
+
+  .story-overlay {
+    padding: 60px 0;
+    background: rgba(0, 0, 0, 0.55); /* Stronger overlay on mobile */
+  }
+
+  .story-container {
+    padding: 0 20px;
+  }
+
+  .story-title {
+    font-size: 36px;
+  }
+
+  .story-description {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .story-description br {
+    display: none; /* Allows text to reflow naturally on small screens */
+  }
+}
+.awards-section {
+  background-color: #ffffff;
+  padding: 80px 20px 100px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.awards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Heading Styling */
+.awards-title {
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  margin-right: -10px; /* Offsets trailing letter-spacing to optically center text */
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+}
+
+.awards-title span {
+  font-weight: 700;
+}
+
+/* Grid Layout - 5 Columns */
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Award Card Styling */
+.award-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.award-card:hover {
+  transform: translateY(-5px);
+}
+
+.award-card img {
+  max-width: 100%;
+  max-height: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .awards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+  }
+  
+  .awards-title {
+    font-size: 32px;
+    letter-spacing: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .awards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+
+  .awards-title {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+}
+
+/* --- GALLERY SECTION --- */
+.life-at-swiggy-gallery {
+  display: flex;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.gallery-item {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03); /* Subtle zoom effect on hover */
+}
+
+/* --- FOOTER SECTION --- */
+.swiggy-footer {
+  background-color: #5333ad; /* Swiggy signature footer purple */
+  padding: 45px 20px 30px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation Links */
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+
+.footer-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+.footer-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.footer-socials a {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-socials a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Copyright Line */
+.footer-copyright {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Scaling */
+@media (max-width: 768px) {
+  .life-at-swiggy-gallery {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .gallery-item {
+    height: 250px;
+  }
+
+  .footer-nav {
+    gap: 15px 20px;
+  }
+}
