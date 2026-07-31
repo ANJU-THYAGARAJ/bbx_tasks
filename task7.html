@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Movie Ticket Booking</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#1c1c1c;
+    min-height:100vh;
+}
+
+/* Navbar */
+
+header{
+    background:#e71a3c;
+    color:#fff;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:15px;
+    font-weight:500;
+}
+
+nav a:hover{
+    opacity:.8;
+}
+
+/* Hero */
+
+.hero{
+
+    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1400");
+
+    background-size:cover;
+    background-position:center;
+
+    height:280px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    color:#fff;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* Card */
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:-70px auto 50px;
+}
+
+.booking-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.card-header{
+
+    background:#f5f5f5;
+
+    padding:25px;
+
+    border-bottom:1px solid #ddd;
+}
+
+.card-header h2{
+    color:#222;
+}
+
+.card-header p{
+    color:#777;
+    margin-top:5px;
+}
+
+#output{
+
+    padding:30px;
+
+}
+
+#output p{
+
+    background:#fafafa;
+
+    border-left:5px solid #e71a3c;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    border-radius:10px;
+
+    color:#444;
+
+    font-size:16px;
+
+}
+
+/* Footer */
+
+footer{
+
+    background:#111;
+
+    color:#aaa;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
+
+}
+
+nav{
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+nav a{
+    margin:8px;
+}
+
+.hero{
+
+    height:220px;
+
+}
+
+.hero h1{
+
+    font-size:30px;
+
+}
+
+.container{
+
+    width:95%;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🎟 MovieBook
+</div>
+
+<nav>
+
+<a href="#">Movies</a>
+<a href="#">Events</a>
+<a href="#">Sports</a>
+<a href="#">Offers</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Book Movie Tickets</h1>
+
+<p>Experience entertainment like never before</p>
+
+</section>
+
+<div class="container">
+
+<div class="booking-card">
+
+<div class="card-header">
+
+<h2>🎬 Online Movie Ticket Booking</h2>
+
+<p>Your booking details will appear below.</p>
+
+</div>
+
+<div id="output">
+
+<!-- JavaScript Output Here -->
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 MovieBook. All Rights Reserved.
+
+</footer>
+
+<script src="asset/js/task7.js"></script>
+
+</body>
+</html>
