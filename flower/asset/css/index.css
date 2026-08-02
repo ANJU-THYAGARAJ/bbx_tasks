@@ -1,0 +1,112 @@
+/* Color Palette */
+:root {
+  --pink-color: #e84393;
+  --dark-btn: #333333;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.text-pink {
+  color: var(--pink-color) !important;
+}
+
+/* Header Navbar Styling */
+.navbar-nav .nav-link:hover,
+.navbar-nav  {
+  color: var(--pink-color) !important;
+}
+
+.header-icons a:hover {
+  color: var(--pink-color) !important;
+  transition: color 0.3s ease;
+}
+
+/* Hero Section with CSS Background Image */
+.hero-section {
+  min-height: calc(100vh - 80px);
+  /* Background Image properties */
+  background-image: url('https://shopping-flower.netlify.app/images/home-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Optional Overlay on mobile screens for text readability */
+@media (max-width: 991px) {
+  .hero-section {
+    background-position: center;
+  }
+  .hero-text {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+  }
+}
+
+.hero-text h1 {
+  color: #2c2c2c;
+  letter-spacing: -1px;
+}
+
+.hero-text h2 {
+  font-weight: 500;
+}
+
+.btn-dark-custom {
+  background-color: var(--dark-btn);
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-dark-custom:hover {
+  background-color: var(--pink-color);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+/* Light Pink Banner for Heading Section */
+.heading-banner {
+  background-color: #fdeef4; /* Light soft pink background */
+  width: 100%;
+}
+
+/* Bright Pink Text for 'About' */
+.text-pink {
+  color: #e84393 !important;
+}
+
+/* Dark Grey Text for 'Us' */
+.text-dark {
+  color: #333333 !important;
+}
+.video-container {
+  position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  border: 1.5rem solid #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Banner Text Banner Overlay */
+.video-overlay-text {
+  color: #bd9b19;
+  background-color: rgba(255, 255, 255, 0.9);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 12px 0;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
