@@ -1,4 +1,4 @@
-/* Color Palette */
+
 :root {
   --pink-color: #e84393;
   --dark-btn: #333333;
@@ -16,7 +16,6 @@ body {
   color: var(--pink-color) !important;
 }
 
-/* Header Navbar Styling */
 .navbar-nav .nav-link:hover,
 .navbar-nav  {
   color: var(--pink-color) !important;
@@ -27,10 +26,9 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Hero Section with CSS Background Image */
 .hero-section {
   min-height: calc(100vh - 80px);
-  /* Background Image properties */
+  
   background-image: url('https://shopping-flower.netlify.app/images/home-bg.jpg');
   background-repeat: no-repeat;
   background-position: right center;
@@ -38,7 +36,6 @@ body {
   position: relative;
 }
 
-/* Optional Overlay on mobile screens for text readability */
 @media (max-width: 991px) {
   .hero-section {
     background-position: center;
@@ -72,18 +69,17 @@ body {
   color: #ffffff;
   transform: translateY(-2px);
 }
-/* Light Pink Banner for Heading Section */
+
 .heading-banner {
-  background-color: #fdeef4; /* Light soft pink background */
+  background-color: #fdeef4; 
   width: 100%;
 }
 
-/* Bright Pink Text for 'About' */
+
 .text-pink {
   color: #e84393 !important;
 }
 
-/* Dark Grey Text for 'Us' */
 .text-dark {
   color: #333333 !important;
 }
@@ -100,7 +96,6 @@ body {
   object-fit: cover;
 }
 
-/* Banner Text Banner Overlay */
 .video-overlay-text {
   color: #bd9b19;
   background-color: rgba(255, 255, 255, 0.9);
@@ -117,74 +112,17 @@ heading-banner {
   width: 100%;
 }
 
-/* Discount Badge */
-/* .badge-discount {
+.badge-discount {
   background-color: var(--pink-light-bg);
   color: var(--pink-color);
   font-size: 0.9rem;
   font-weight: 600;
   z-index: 2;
 }
-
-/* Product Card Styling */
-/* .product-card {
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
-} */ 
-
-/* Product Image Box */
-/* .product-img-wrapper {
-  height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.product-img-wrapper img {
-  max-height: 100%;
-  max-width: 100%;
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover .product-img-wrapper img {
-  transform: scale(1.05);
-} */
-
-/* Hover Action Buttons */
-/* .product-icons {
-  bottom: -50px;
-  transition: bottom 0.3s ease;
-}
-
-.product-card:hover .product-icons {
-  bottom: 10px;
-}
-
-.btn-pink-action {
-  background-color: var(--dark-btn);
-  color: #ffffff;
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  transition: all 0.3s ease;
-}
-
-.btn-pink-action:hover {
-  background-color: var(--pink-color);
-  color: #ffffff;
-} */
  product-card {
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* Ensures child elements don't bleed past rounded corners */
+  overflow: hidden; 
 }
 
 .product-card:hover {
@@ -192,14 +130,13 @@ heading-banner {
   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
 }
 
-/* Product Image Box Container */
 .product-img-wrapper {
   height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden; /* Clips the hover bar when it slides out */
+  overflow: hidden; 
 }
 
 .product-img-wrapper img {
@@ -212,12 +149,10 @@ heading-banner {
   transform: scale(1.05);
 }
 
-/* ------------------------------------------
-   Hover Action Bar (Slide-Up Pink Overlay)
-   ------------------------------------------ */
+
 .product-card .card-action-bar {
   position: absolute;
-  bottom: -60px; /* Hidden below the image container */
+  bottom: -60px; 
   left: 0;
   width: 100%;
   background-color: var(--pink-color);
@@ -229,13 +164,11 @@ heading-banner {
   z-index: 3;
 }
 
-/* Reveal action bar on card hover */
 .product-card:hover .card-action-bar {
   bottom: 0;
   opacity: 1;
 }
 
-/* Action Bar Buttons */
 .card-action-bar .action-btn {
   background: transparent;
   border: none;
@@ -255,7 +188,71 @@ heading-banner {
   border-right: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-/* Individual Button Hover State */
 .card-action-bar .action-btn:hover {
-  background-color: var(--dark-btn); /* Changes to dark grey when hovered */
+  background-color: var(--dark-btn); 
+}
+.review .box-container {
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: nowrap;     
+    gap: 1.5rem;
+    padding: 0 5%;
+    justify-content: center;
+    overflow-x: auto;      
+}
+
+
+.review .box-container .box {
+    flex: 0 1 24rem;      
+    max-width: 26rem;      
+    box-shadow: var(--box-shadow);
+    border-radius: .6rem;
+    padding: 1.5rem;       
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, .05);
+    position: relative;
+}
+
+.review .box-container .box .stars i {
+    font-size: 1.3rem;     
+    margin-bottom: 1rem;
+    margin-right: .1rem;
+    color: var(--pink-color);
+}
+
+.review .box-container .box p {
+    color: var(--light-color);
+    font-size: 1.1rem;     
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.review .box-container .box .user {
+    display: flex;
+    align-items: center;
+}
+
+.review .box-container .box .user img {
+    height: 4rem;          
+    width: 4rem;           
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.review .box-container .box .user .user-info h3 {
+    font-size: 1.3rem;     
+    color: var(--black);
+    font-weight: bold;
+}
+
+.review .box-container .box .user .user-info span {
+    font-size: 1rem;       
+    color: var(--light-color);
+}
+
+.review .box-container .box .user .quote-icon {
+    font-size: 2.8rem;     
+    color: #eee;
+    margin-left: auto;
 }
