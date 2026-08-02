@@ -118,7 +118,7 @@ heading-banner {
 }
 
 /* Discount Badge */
-.badge-discount {
+/* .badge-discount {
   background-color: var(--pink-light-bg);
   color: var(--pink-color);
   font-size: 0.9rem;
@@ -127,7 +127,7 @@ heading-banner {
 }
 
 /* Product Card Styling */
-.product-card {
+/* .product-card {
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -135,10 +135,10 @@ heading-banner {
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
-}
+} */ 
 
 /* Product Image Box */
-.product-img-wrapper {
+/* .product-img-wrapper {
   height: 250px;
   display: flex;
   align-items: center;
@@ -153,10 +153,10 @@ heading-banner {
 
 .product-card:hover .product-img-wrapper img {
   transform: scale(1.05);
-}
+} */
 
 /* Hover Action Buttons */
-.product-icons {
+/* .product-icons {
   bottom: -50px;
   transition: bottom 0.3s ease;
 }
@@ -180,4 +180,82 @@ heading-banner {
 .btn-pink-action:hover {
   background-color: var(--pink-color);
   color: #ffffff;
+} */
+ product-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Ensures child elements don't bleed past rounded corners */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Product Image Box Container */
+.product-img-wrapper {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Clips the hover bar when it slides out */
+}
+
+.product-img-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img-wrapper img {
+  transform: scale(1.05);
+}
+
+/* ------------------------------------------
+   Hover Action Bar (Slide-Up Pink Overlay)
+   ------------------------------------------ */
+.product-card .card-action-bar {
+  position: absolute;
+  bottom: -60px; /* Hidden below the image container */
+  left: 0;
+  width: 100%;
+  background-color: var(--pink-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 3;
+}
+
+/* Reveal action bar on card hover */
+.product-card:hover .card-action-bar {
+  bottom: 0;
+  opacity: 1;
+}
+
+/* Action Bar Buttons */
+.card-action-bar .action-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-action-bar .add-to-cart-btn {
+  flex-grow: 1;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Individual Button Hover State */
+.card-action-bar .action-btn:hover {
+  background-color: var(--dark-btn); /* Changes to dark grey when hovered */
 }
