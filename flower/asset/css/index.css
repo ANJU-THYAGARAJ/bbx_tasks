@@ -182,77 +182,74 @@ heading-banner {
   justify-content: center;
 }
 
-.card-action-bar .add-to-cart-btn {
-  flex-grow: 1;
-  border-left: 1px solid rgba(255, 255, 255, 0.25);
-  border-right: 1px solid rgba(255, 255, 255, 0.25);
+#review .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
-.card-action-bar .action-btn:hover {
-  background-color: var(--dark-btn); 
-}
-.review .box-container {
-    display: flex;
-    flex-direction: row;  
-    flex-wrap: nowrap;     
-    gap: 1.5rem;
-    padding: 0 5%;
-    justify-content: center;
-    overflow-x: auto;      
-}
-
-
-.review .box-container .box {
-    flex: 0 1 24rem;      
-    max-width: 26rem;      
-    box-shadow: var(--box-shadow);
-    border-radius: .6rem;
-    padding: 1.5rem;       
-    background: #fff;
-    border: .1rem solid rgba(0, 0, 0, .05);
-    position: relative;
+#review .box {
+  flex: 1 1 300px;
+  max-width: 380px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.review .box-container .box .stars i {
-    font-size: 1.3rem;     
-    margin-bottom: 1rem;
-    margin-right: .1rem;
-    color: var(--pink-color);
+#review .box .stars {
+  margin-bottom: 1rem;
 }
 
-.review .box-container .box p {
-    color: var(--light-color);
-    font-size: 1.1rem;     
-    line-height: 1.5;
-    margin-bottom: 1.2rem;
+#review .box .stars i {
+  color: var(--pink-color);
+  font-size: 1.2rem;
+  margin-right: 2px;
 }
 
-.review .box-container .box .user {
-    display: flex;
-    align-items: center;
+
+#review .box p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-.review .box-container .box .user img {
-    height: 4rem;          
-    width: 4rem;           
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 1rem;
+
+#review .box .user {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.review .box-container .box .user .user-info h3 {
-    font-size: 1.3rem;     
-    color: var(--black);
-    font-weight: bold;
+#review .box .user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
 }
 
-.review .box-container .box .user .user-info span {
-    font-size: 1rem;       
-    color: var(--light-color);
+#review .box .user .user-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0;
 }
 
-.review .box-container .box .user .quote-icon {
-    font-size: 2.8rem;     
-    color: #eee;
-    margin-left: auto;
+#review .box .user .user-info span {
+  font-size: 0.85rem;
+  color: #999999;
+}
+
+#review .box .user .quote-icon {
+  position: absolute;
+  right: 0;
+  font-size: 2.5rem;
+  color: var(--light-gray);
 }
