@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:  Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   padding-top: 80px;
   overflow-x: hidden;
@@ -308,4 +308,62 @@ input[type="number"]::-webkit-inner-spin-button {
 .illustration-box img {
   max-width: 100%;
   height: auto;
+}
+.footer {
+  background-color: #ffffff;
+  padding: 3rem 9% 1.5rem 9%;
+  border-top: 1px solid var(--border);
+}
+
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.footer .box-container .box {
+  flex: 1 1 200px;
+}
+
+.footer .box-container .box h3 {
+  color: var(--dark-btn);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+
+.footer .box-container .box a {
+  display: block;
+  color: var(--gray);
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 0.4rem 0;
+  transition: color 0.2s ease;
+}
+
+.footer .box-container .box a:hover {
+  color: var(--pink-color);
+}
+
+.footer .box-container .box .payment-img {
+  margin-top: 1rem;
+  max-width: 180px;
+  height: auto;
+  display: block;
+}
+
+.footer .credit {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var( --dark-btn);
+}
+
+.footer .credit .text-pink {
+  color: var(--pink-color);
 }
