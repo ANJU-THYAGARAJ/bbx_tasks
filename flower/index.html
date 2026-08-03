@@ -526,7 +526,83 @@
 
     </div>
   </div>
-</section> <!-- Bootstrap 5 JS Bundle -->
+</section> 
+<section id="contact" class="contact-section py-5" aria-labelledby="review-heading">
+  <div class="container my-4">
+    <div class="text-center mb-3 heading-banner py-3">
+      <h2 id="contact-heading" class="display-5 fw-bold m-0">
+        <span class="text-dark">Contact</span> <span class="text-pink">Us</span>
+      </h2>
+    </div>
+  <div class="row align-items-center g-4">
+     
+      <div class="col-md-6">
+        <form id="contactForm" class="contact-form-card p-4">
+          
+          <div class="mb-3">
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              class="form-control" 
+              placeholder="name" 
+              required
+            >
+          </div>
+
+          <div class="mb-3">
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-control" 
+              placeholder="email" 
+              required
+            >
+          </div>
+
+          <div class="mb-3">
+            <input 
+              type="tel" 
+              id="number" 
+              name="number" 
+              class="form-control" 
+              placeholder="number" 
+              required
+            >
+          </div>
+
+          <div class="mb-3">
+            <textarea 
+              id="message" 
+              name="message" 
+              class="form-control" 
+              rows="5" 
+              placeholder="message" 
+              required
+            ></textarea>
+          </div>
+
+          <input 
+            type="submit" 
+            value="send message" 
+            class="btn btn-dark-custom btn-lg px-4 py-2 rounded-pill">
+        </form>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <div class="illustration-box">
+          <img 
+            src="https://shopping-flower.netlify.app/images/contact-img.svg" 
+            alt="illustration" 
+            class="img-fluid"
+          >
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
   <script src="asset/js/index.js"></script>
