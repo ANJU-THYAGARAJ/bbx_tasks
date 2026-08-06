@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT UI</title>
+  <link rel="stylesheet" href="asset/css/index.css">
+  <!--  Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="app">
+    
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="header">
+          <img src="asset/img/icon.png" alt="Logo" class="logo" />
+          <div>
+            <button class="icon-btn"><i data-lucide="search"></i></button>
+            <button class="icon-btn"><i data-lucide="panel-left"></i></button>
+          </div>
+        </div>
+
+        <button class="new-chat-btn">
+          <i data-lucide="square-pen"></i>
+          <span>New chat</span>
+        </button>
+
+        <nav class="menu">
+          <a href="#"><i data-lucide="image"></i> Images</a>
+          <a href="#"><i data-lucide="globe"></i> Plugins</a>
+          <a href="#"><i data-lucide="megaphone"></i> Deep research</a>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <nav class="menu">
+          <a href="#"><i data-lucide="compass"></i> See plans and pricing</a>
+          <a href="#"><i data-lucide="settings"></i> Settings</a>
+          <a href="#"><i data-lucide="help-circle"></i> Help</a>
+        </nav>
+
+        <div class="login-card">
+          <h4>Get responses tailored to you</h4>
+          <p>Log in to get answers based on saved chats, plus create images and upload files.</p>
+          <button class="btn btn-white btn-full">Log in</button>
+        </div>
+      </div>
+    </aside>
+
+    
+    <main class="main">
+      <header class="top-bar">
+        <div class="model-select">
+          <span>ChatGPT</span>
+          <i data-lucide="chevron-down"></i>
+        </div>
+        <div class="auth-btns">
+        <button class="btn btn-white">Log in </button>
+        <button class="btn btn-text">Sign up for free</button>
+         
+        </div>
+      </header>
+
+      <section class="hero">
+        <h1>What's on the agenda today?</h1>
+
+        <div class="search-box">
+          <button class="icon-btn"><i data-lucide="plus"></i></button>
+          <input type="text" id="prompt-input" placeholder="Ask anything" />
+          <div class="actions">
+            <button class="icon-btn"><i data-lucide="mic"></i></button>
+            <button class="voice-btn"><i data-lucide="audio-lines"></i> Voice</button>
+          </div>
+        </div>
+
+        <div class="suggestions">
+          <button class="card"><i data-lucide="gift"></i> Explain my medical report</button>
+          <button class="card"><i data-lucide="gift"></i> Should I see a doctor?</button>
+          <button class="card"><i data-lucide="feather"></i> Help me reply to my boss</button>
+        </div>
+      </section>
+
+      <footer>
+        ChatGPT is AI. By using it, you agree to our <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.
+      </footer>
+    </main>
+  </div>
+
+  <script src="asset/js/index.js"></script>
+</body>
+</html>
