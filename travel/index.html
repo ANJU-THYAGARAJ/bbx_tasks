@@ -1,205 +1,563 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TravelEscape — Journey Beyond the Ordinary</title>
-<link rel="stylesheet" href="asset/css/index.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TravelVista - India Explorer</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet"
+          href="asset/css/index.css">
+
 </head>
+
 <body>
- 
-<header>
 
-        <div class="container nav">
 
-            <div class="logo">
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
-                <h2>Travel<span>Escape</span></h2>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
-            </div>
+    <div class="container">
 
-            <nav>
+        <a class="navbar-brand logo"
+           href="#home">
 
-                <ul>
+            <i class="bi bi-send-fill"></i>
 
-                    <li><a href="#">Home</a></li>
+            Travel<span>Vista</span>
 
-                    <li><a href="#top">Top Rated</a></li>
+        </a>
 
-                    <li><a href="#destination">Destinations</a></li>
 
-                    <li><a href="#contact">Contact</a></li>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu">
 
-                </ul>
+            <span class="navbar-toggler-icon"></span>
 
-            </nav>
+        </button>
 
-            <div class="menu">
 
-                <i class="fa-solid fa-bars"></i>
+        <div class="collapse navbar-collapse"
+             id="navbarMenu">
 
-            </div>
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active"
+                       href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#topRated">
+                        Top Rated
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#destinations">
+                        Destinations
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
 
         </div>
 
-    </header>
+    </div>
+
+</nav>
 
 
 
-    <!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-    <section class="hero">
+<section id="home"
+         class="hero-section">
 
-        <div class="container hero-grid">
+    <div class="hero-overlay"></div>
 
-            <!-- LEFT -->
+    <div class="container hero-content">
 
-            <div class="hero-text">
+        <p class="hero-script">
+            Explore Incredible India
+        </p>
 
-                <p class="tag">
-                    INCREDIBLE INDIA
-                </p>
+        <h1>
+            Discover Places<br>
+            You'll Love
+        </h1>
 
-                <h1>
-                    Journey <br>
-                    Beyond <br>
-                    the Ordinary
-                </h1>
+        <p class="hero-description">
 
-                <p class="description">
+            From misty mountains to peaceful beaches,
+            discover unforgettable destinations across India.
 
-                    From the misty peaks of the Himalayas
-                    to the sun-drenched shores of Goa —
-                    discover India's finest destinations.
-
-                </p>
-                <span class="date" id="currentDateTime"></span>
-
-                <div class="buttons">
-
-                    <a href="#top" class="btn">
-
-                        Explore
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                    <a href="#top" class="text-btn">
-
-                        Top rated
-
-                    </a>
-
-                </div>
-
-            </div>
+        </p>
 
 
+        <!-- Current Date Time -->
 
-            <!-- RIGHT -->
+        <div class="date-time">
 
-            <div class="hero-image">
+            <i class="bi bi-clock"></i>
 
-                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=700&h=875&fit=crop" alt="Travel">
-
-            </div>
+            <span id="currentDateTime">
+                Loading date & time...
+            </span>
 
         </div>
 
-    </section>
+
+        <button
+            class="btn explore-btn"
+            id="exploreBtn">
+
+            Explore Destinations
+
+            <i class="bi bi-arrow-right"></i>
+
+        </button>
+
+    </div>
+
+</section>
 
 
 
-    <!-- ================= TOP DESTINATIONS ================= -->
+<!-- =====================================================
+     TOP RATED DESTINATIONS
+===================================================== -->
 
-    <section id="top" class="top-rated">
+<section id="topRated"
+         class="section-padding">
 
-        <div class="container">
+    <div class="container">
 
-            <div class="section-heading">
+        <div class="section-title">
 
-                <small>HANDPICKED</small>
+            <p>
+                Top Rated
+            </p>
 
-                <h2>Top Rated</h2>
+            <h2>
+                Travelers' Favourite Places
+            </h2>
 
-            </div>
+        </div>
 
-            <div class="cards">
 
-                <div class="card">
+        <div class="row g-4">
 
-                    <img src="asset/img/munnar.jpg" alt="">
 
-                    <div class="content">
+            <!-- TOP RATED 1 -->
+            <div class="col-lg-3 col-md-6">
 
-                        <small>Winter • 3–5 Days</small>
+                <div class="top-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80"
+                        alt="Munnar">
+
+                    <span class="top-badge">
+                        <i class="bi bi-star-fill"></i>
+                        Top Rated
+                    </span>
+
+                    <div class="top-card-content">
 
                         <h3>Munnar</h3>
 
-                        <div class="bottom">
+                        <p>
+                            Kerala, India
+                        </p>
 
-                            <span>₹4,000</span>
+                        <small>
+                            Winter · 3-4 Days
+                        </small>
 
-                            <span>
-                                4.8
-                                <i class="fa-solid fa-star"></i>
-                            </span>
+                        <button
+                            class="btn details-btn"
+                            data-target="munnar">
 
-                        </div>
+                            View Details
+
+                        </button>
 
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <div class="card">
+            <!-- TOP RATED 2 -->
+            <div class="col-lg-3 col-md-6">
 
-                    <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800&h=500&fit=crop" alt="">
+                <div class="top-card">
 
-                    <div class="content">
+                    <img
+                        src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=800&q=80"
+                        alt="Goa">
 
-                        <small>Winter • 4–6 Days</small>
+                    <span class="top-badge">
+                        <i class="bi bi-star-fill"></i>
+                        Top Rated
+                    </span>
+
+                    <div class="top-card-content">
 
                         <h3>Goa</h3>
 
-                        <div class="bottom">
+                        <p>
+                            Goa, India
+                        </p>
 
-                            <span>₹6,000</span>
+                        <small>
+                            Winter · 3-5 Days
+                        </small>
 
-                            <span>
-                                4.7
-                                <i class="fa-solid fa-star"></i>
-                            </span>
+                        <button
+                            class="btn details-btn"
+                            data-target="goa">
 
-                        </div>
+                            View Details
+
+                        </button>
 
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <div class="card">
+            <!-- TOP RATED 3 -->
+            <div class="col-lg-3 col-md-6">
 
-                    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&h=500&fit=crop" alt="">
+                <div class="top-card">
 
-                    <div class="content">
+                    <img
+                        src="https://picsum.photos/seed/manali/700/450"
+                        alt="Manali">
 
-                        <small>Summer • 5–7 Days</small>
+                    <span class="top-badge">
+                        <i class="bi bi-star-fill"></i>
+                        Top Rated
+                    </span>
+
+                    <div class="top-card-content">
 
                         <h3>Manali</h3>
 
-                        <div class="bottom">
+                        <p>
+                            Himachal Pradesh, India
+                        </p>
 
-                            <span>₹8,000</span>
+                        <small>
+                            Winter · 4-6 Days
+                        </small>
 
-                            <span>
-                                4.9
-                                <i class="fa-solid fa-star"></i>
-                            </span>
+                        <button
+                            class="btn details-btn"
+                            data-target="manali">
+
+                            View Details
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOP RATED 4 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="top-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80"
+                        alt="Agra">
+
+                    <span class="top-badge">
+                        <i class="bi bi-star-fill"></i>
+                        Top Rated
+                    </span>
+
+                    <div class="top-card-content">
+
+                        <h3>Agra</h3>
+
+                        <p>
+                            Uttar Pradesh, India
+                        </p>
+
+                        <small>
+                            Winter · 2-3 Days
+                        </small>
+
+                        <button
+                            class="btn details-btn"
+                            data-target="agra">
+
+                            View Details
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OUR DESTINATIONS
+===================================================== -->
+
+<section id="destinations"
+         class="destination-section section-padding">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <p>
+                Explore India
+            </p>
+
+            <h2>
+                Our Destinations
+            </h2>
+
+        </div>
+
+
+        <!-- SEARCH AND FILTER -->
+
+        <div class="filter-box">
+
+            <div class="row g-3">
+
+                <div class="col-lg-8">
+
+                    <label>
+                        Search Destination
+                    </label>
+
+                    <div class="input-group">
+
+                        <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                        </span>
+
+                        <input
+                            type="text"
+                            id="searchInput"
+                            class="form-control"
+                            placeholder="Search destinations like Munnar, Goa, Jaipur...">
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <label>
+                        Filter by Season
+                    </label>
+
+                    <select
+                        id="seasonFilter"
+                        class="form-select">
+
+                        <option value="all">
+                            All
+                        </option>
+
+                        <option value="Summer">
+                            Summer
+                        </option>
+
+                        <option value="Winter">
+                            Winter
+                        </option>
+
+                        <option value="Monsoon">
+                            Monsoon
+                        </option>
+
+                        <option value="Autumn">
+                            Autumn
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DESTINATION CARDS -->
+
+        <div class="row g-4 mt-3"
+             id="destinationContainer">
+
+
+            <!-- =================================================
+                 1 MUNNAR
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 destination-wrapper">
+
+                <div
+                    class="destination-card"
+                    id="munnar"
+                    data-name="Munnar"
+                    data-season="Winter">
+
+                    <div class="image-box">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"
+                            alt="Munnar">
+
+                        <span class="image-rating">
+                            ⭐ 4.9
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-body">
+
+                        <h3>
+                            Munnar
+                        </h3>
+
+                        
+                        <p class="location-hover"
+                           data-country="India"
+                           data-location="Munnar, Idukki, Kerala">
+                            India
+                        </p>
+
+                        <p>
+                            <strong>Best Season:</strong>
+                            Winter
+                        </p>
+
+                        <p>
+                            <strong>Budget:</strong>
+                            ₹8,000 / Person
+                        </p>
+
+                        <p>
+                            <strong>Couple:</strong>
+                            ₹15,000
+                        </p>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            3 Days
+                        </p>
+
+                        <p class="route-text">
+                            Hover Me to Know Route
+                        </p>
+
+
+                        <div class="card-buttons">
+
+                            <button
+                                class="btn btn-package"
+                                data-bs-toggle="modal"
+                                data-bs-target="#packageModal"
+                                data-destination="Munnar"
+                                data-cost="8000">
+
+                                Package Details
+
+                            </button>
+
+                            <button
+                                class="btn btn-description"
+                                data-bs-toggle="modal"
+                                data-bs-target="#descriptionModal"
+                                data-destination="Munnar">
+
+                                View Description
+
+                            </button>
+
+                            <button
+                                class="btn btn-ready"
+                                data-destination="Munnar"
+                                data-cost="8000">
+
+                                READY TO GO
+
+                            </button>
 
                         </div>
 
@@ -207,26 +565,1026 @@
 
                 </div>
 
+            </div>
 
 
-                <div class="card">
 
-                    <img src="asset/img/jaipur.jpg" alt="">
+            <!-- =================================================
+                 2 GOA
+            ================================================== -->
 
-                    <div class="content">
+            <div class="col-lg-4 col-md-6 destination-wrapper">
 
-                        <small>Winter • 3–4 Days</small>
+                <div
+                    class="destination-card"
+                    id="goa"
+                    data-name="Goa"
+                    data-season="Winter">
+
+                    <div class="image-box">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=80"
+                            alt="Goa">
+
+                        <span class="image-rating">
+                            ⭐ 4.8
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-body">
+
+                        <h3>Goa</h3>
+
+
+                        <p class="location-hover"
+                           data-country="India"
+                           data-location="North Goa, Goa, India">
+                            India
+                        </p>
+
+                        <p>
+                            <strong>Best Season:</strong>
+                            Winter
+                        </p>
+
+                        <p>
+                            <strong>Budget:</strong>
+                            ₹10,000 / Person
+                        </p>
+
+                        <p>
+                            <strong>Couple:</strong>
+                            ₹18,000
+                        </p>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            3 Days
+                        </p>
+
+                        <p class="route-text">
+                            Hover Me to Know Route
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                class="btn btn-package"
+                                data-bs-toggle="modal"
+                                data-bs-target="#packageModal"
+                                data-destination="Goa"
+                                data-cost="10000">
+                                Package Details
+                            </button>
+
+                            <button
+                                class="btn btn-description"
+                                data-bs-toggle="modal"
+                                data-bs-target="#descriptionModal"
+                                data-destination="Goa">
+                                View Description
+                            </button>
+
+                            <button
+                                class="btn btn-ready"
+                                data-destination="Goa"
+                                data-cost="10000">
+                                READY TO GO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 3 MANALI
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 destination-wrapper">
+
+                <div
+                    class="destination-card"
+                    id="manali"
+                    data-name="Manali"
+                    data-season="Winter">
+
+                    <div class="image-box">
+
+                        <img
+                            src="https://picsum.photos/seed/manali/700/450"
+                            alt="Manali">
+
+                        <span class="image-rating">
+                            ⭐ 4.9
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Manali</h3>
+                        <p class="location-hover"
+                           data-country="India"
+                           data-location="Manali, Himachal Pradesh">
+                            India
+                        </p>
+
+                        <p>
+                            <strong>Best Season:</strong>
+                            Winter
+                        </p>
+
+                        <p>
+                            <strong>Budget:</strong>
+                            ₹12,000 / Person
+                        </p>
+
+                        <p>
+                            <strong>Couple:</strong>
+                            ₹22,000
+                        </p>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            4 Days
+                        </p>
+
+                        <p class="route-text">
+                            Hover Me to Know Route
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                class="btn btn-package"
+                                data-bs-toggle="modal"
+                                data-bs-target="#packageModal"
+                                data-destination="Manali"
+                                data-cost="12000">
+                                Package Details
+                            </button>
+
+                            <button
+                                class="btn btn-description"
+                                data-bs-toggle="modal"
+                                data-bs-target="#descriptionModal"
+                                data-destination="Manali">
+                                View Description
+                            </button>
+
+                            <button
+                                class="btn btn-ready"
+                                data-destination="Manali"
+                                data-cost="12000">
+                                READY TO GO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 4 AGRA
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 destination-wrapper">
+
+                <div
+                    class="destination-card"
+                    id="agra"
+                    data-name="Agra"
+                    data-season="Winter">
+
+                    <div class="image-box">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80"
+                            alt="Agra">
+
+                        <span class="image-rating">
+                            ⭐ 4.8
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Agra</h3>
+                        <p class="location-hover"
+                           data-country="India"
+                           data-location="Agra, Uttar Pradesh">
+                            India
+                        </p>
+
+                        <p>
+                            <strong>Best Season:</strong>
+                            Winter
+                        </p>
+
+                        <p>
+                            <strong>Budget:</strong>
+                            ₹6,000 / Person
+                        </p>
+
+                        <p>
+                            <strong>Couple:</strong>
+                            ₹11,000
+                        </p>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            2 Days
+                        </p>
+
+                        <p class="route-text">
+                            Hover Me to Know Route
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                class="btn btn-package"
+                                data-bs-toggle="modal"
+                                data-bs-target="#packageModal"
+                                data-destination="Agra"
+                                data-cost="6000">
+                                Package Details
+                            </button>
+
+                            <button
+                                class="btn btn-description"
+                                data-bs-toggle="modal"
+                                data-bs-target="#descriptionModal"
+                                data-destination="Agra">
+                                View Description
+                            </button>
+
+                            <button
+                                class="btn btn-ready"
+                                data-destination="Agra"
+                                data-cost="6000">
+                                READY TO GO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 5 PONMUDI
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 destination-wrapper">
+
+                <div
+                    class="destination-card"
+                    data-name="Ponmudi"
+                    data-season="Monsoon">
+
+                    <div class="image-box">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=900&q=80"
+                            alt="Ponmudi">
+
+                        <span class="image-rating">
+                            ⭐ 4.7
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Ponmudi</h3>
+
+
+                        <p class="location-hover"
+                           data-country="India"
+                           data-location="Ponmudi, Thiruvananthapuram, Kerala">
+                            India
+                        </p>
+
+                        <p>
+                            <strong>Best Season:</strong>
+                            Monsoon
+                        </p>
+
+                        <p>
+                            <strong>Budget:</strong>
+                            ₹5,000 / Person
+                        </p>
+
+                        <p>
+                            <strong>Couple:</strong>
+                            ₹9,000
+                        </p>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            2 Days
+                        </p>
+
+                        <p class="route-text">
+                            Hover Me to Know Route
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                class="btn btn-package"
+                                data-bs-toggle="modal"
+                                data-bs-target="#packageModal"
+                                data-destination="Ponmudi"
+                                data-cost="5000">
+                                Package Details
+                            </button>
+
+                            <button
+                                class="btn btn-description"
+                                data-bs-toggle="modal"
+                                data-bs-target="#descriptionModal"
+                                data-destination="Ponmudi">
+                                View Description
+                            </button>
+
+                            <button
+                                class="btn btn-ready"
+                                data-destination="Ponmudi"
+                                data-cost="5000">
+                                READY TO GO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 6 JAIPUR
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 destination-wrapper">
+
+                <div
+                    class="destination-card"
+                    data-name="Jaipur"
+                    data-season="Autumn">
+
+                    <div class="image-box">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=900&q=80"
+                            alt="Jaipur">
+
+                        <span class="image-rating">
+                            ⭐ 4.6
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
 
                         <h3>Jaipur</h3>
 
-                        <div class="bottom">
+                        <p class="location-hover"
+                           data-country="India"
+                           data-location="Jaipur, Rajasthan">
+                            India
+                        </p>
 
-                            <span>₹5,000</span>
+                        <p>
+                            <strong>Best Season:</strong>
+                            Autumn
+                        </p>
 
-                            <span>
-                                4.6
-                                <i class="fa-solid fa-star"></i>
-                            </span>
+                        <p>
+                            <strong>Budget:</strong>
+                            ₹7,000 / Person
+                        </p>
+
+                        <p>
+                            <strong>Couple:</strong>
+                            ₹13,000
+                        </p>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            3 Days
+                        </p>
+
+                        <p class="route-text">
+                            Hover Me to Know Route
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                class="btn btn-package"
+                                data-bs-toggle="modal"
+                                data-bs-target="#packageModal"
+                                data-destination="Jaipur"
+                                data-cost="7000">
+                                Package Details
+                            </button>
+
+                            <button
+                                class="btn btn-description"
+                                data-bs-toggle="modal"
+                                data-bs-target="#descriptionModal"
+                                data-destination="Jaipur">
+                                View Description
+                            </button>
+
+                            <button
+                                class="btn btn-ready"
+                                data-destination="Jaipur"
+                                data-cost="7000">
+                                READY TO GO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 7 OOTY
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 destination-wrapper">
+
+                <div
+                    class="destination-card"
+                    data-name="Ooty"
+                    data-season="Summer">
+
+                    <div class="image-box">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=900&q=80"
+                            alt="Ooty">
+
+                        <span class="image-rating">
+                            ⭐ 4.6
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Ooty</h3>
+
+                        <p class="location-hover"
+                           data-country="India"
+                           data-location="Ooty, Tamil Nadu">
+                            India
+                        </p>
+
+                        <p>
+                            <strong>Best Season:</strong>
+                            Summer
+                        </p>
+
+                        <p>
+                            <strong>Budget:</strong>
+                            ₹6,500 / Person
+                        </p>
+
+                        <p>
+                            <strong>Couple:</strong>
+                            ₹12,000
+                        </p>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            3 Days
+                        </p>
+
+                        <p class="route-text">
+                            Hover Me to Know Route
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                class="btn btn-package"
+                                data-bs-toggle="modal"
+                                data-bs-target="#packageModal"
+                                data-destination="Ooty"
+                                data-cost="6500">
+                                Package Details
+                            </button>
+
+                            <button
+                                class="btn btn-description"
+                                data-bs-toggle="modal"
+                                data-bs-target="#descriptionModal"
+                                data-destination="Ooty">
+                                View Description
+                            </button>
+
+                            <button
+                                class="btn btn-ready"
+                                data-destination="Ooty"
+                                data-cost="6500">
+                                READY TO GO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 8 KASHMIR
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 destination-wrapper">
+
+                <div
+                    class="destination-card"
+                    data-name="Kashmir"
+                    data-season="Summer">
+
+                    <div class="image-box">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1566837497312-7be5b7c0b3b4?auto=format&fit=crop&w=900&q=80"
+                            alt="Kashmir">
+
+                        <span class="image-rating">
+                            ⭐ 4.9
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Kashmir</h3>
+
+                        <p class="location-hover"
+                           data-country="India"
+                           data-location="Srinagar, Jammu & Kashmir">
+                            India
+                        </p>
+
+                        <p>
+                            <strong>Best Season:</strong>
+                            Summer
+                        </p>
+
+                        <p>
+                            <strong>Budget:</strong>
+                            ₹14,000 / Person
+                        </p>
+
+                        <p>
+                            <strong>Couple:</strong>
+                            ₹26,000
+                        </p>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            5 Days
+                        </p>
+
+                        <p class="route-text">
+                            Hover Me to Know Route
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                class="btn btn-package"
+                                data-bs-toggle="modal"
+                                data-bs-target="#packageModal"
+                                data-destination="Kashmir"
+                                data-cost="14000">
+                                Package Details
+                            </button>
+
+                            <button
+                                class="btn btn-description"
+                                data-bs-toggle="modal"
+                                data-bs-target="#descriptionModal"
+                                data-destination="Kashmir">
+                                View Description
+                            </button>
+
+                            <button
+                                class="btn btn-ready"
+                                data-destination="Kashmir"
+                                data-cost="14000">
+                                READY TO GO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 9 RISHIKESH
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 destination-wrapper">
+
+                <div
+                    class="destination-card"
+                    data-name="Rishikesh"
+                    data-season="Autumn">
+
+                    <div class="image-box">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80"
+                            alt="Rishikesh">
+
+                        <span class="image-rating">
+                            ⭐ 4.7
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Rishikesh</h3>
+
+                        <p class="location-hover"
+                           data-country="India"
+                           data-location="Rishikesh, Uttarakhand">
+                            India
+                        </p>
+
+                        <p>
+                            <strong>Best Season:</strong>
+                            Autumn
+                        </p>
+
+                        <p>
+                            <strong>Budget:</strong>
+                            ₹7,500 / Person
+                        </p>
+
+                        <p>
+                            <strong>Couple:</strong>
+                            ₹14,000
+                        </p>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            3 Days
+                        </p>
+
+                        <p class="route-text">
+                            Hover Me to Know Route
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                class="btn btn-package"
+                                data-bs-toggle="modal"
+                                data-bs-target="#packageModal"
+                                data-destination="Rishikesh"
+                                data-cost="7500">
+                                Package Details
+                            </button>
+
+                            <button
+                                class="btn btn-description"
+                                data-bs-toggle="modal"
+                                data-bs-target="#descriptionModal"
+                                data-destination="Rishikesh">
+                                View Description
+                            </button>
+
+                            <button
+                                class="btn btn-ready"
+                                data-destination="Rishikesh"
+                                data-cost="7500">
+                                READY TO GO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 10 ALLEPPEY
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 destination-wrapper">
+
+                <div
+                    class="destination-card"
+                    data-name="Alleppey"
+                    data-season="Monsoon">
+
+                    <div class="image-box">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=80"
+                            alt="Alleppey">
+
+                        <span class="image-rating">
+                            ⭐ 4.8
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Alleppey</h3>
+
+                        <p class="location-hover"
+                           data-country="India"
+                           data-location="Alappuzha, Kerala">
+                            India
+                        </p>
+
+                        <p>
+                            <strong>Best Season:</strong>
+                            Monsoon
+                        </p>
+
+                        <p>
+                            <strong>Budget:</strong>
+                            ₹8,500 / Person
+                        </p>
+
+                        <p>
+                            <strong>Couple:</strong>
+                            ₹16,000
+                        </p>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            3 Days
+                        </p>
+
+                        <p class="route-text">
+                            Hover Me to Know Route
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                class="btn btn-package"
+                                data-bs-toggle="modal"
+                                data-bs-target="#packageModal"
+                                data-destination="Alleppey"
+                                data-cost="8500">
+                                Package Details
+                            </button>
+
+                            <button
+                                class="btn btn-description"
+                                data-bs-toggle="modal"
+                                data-bs-target="#descriptionModal"
+                                data-destination="Alleppey">
+                                View Description
+                            </button>
+
+                            <button
+                                class="btn btn-ready"
+                                data-destination="Alleppey"
+                                data-cost="8500">
+                                READY TO GO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 11 DARJEELING
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 destination-wrapper">
+
+                <div
+                    class="destination-card"
+                    data-name="Darjeeling"
+                    data-season="Summer">
+
+                    <div class="image-box">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=80"
+                            alt="Darjeeling">
+
+                        <span class="image-rating">
+                            ⭐ 4.7
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Darjeeling</h3>
+
+                        <p class="location-hover"
+                           data-country="India"
+                           data-location="Darjeeling, West Bengal">
+                            India
+                        </p>
+
+                        <p>
+                            <strong>Best Season:</strong>
+                            Summer
+                        </p>
+
+                        <p>
+                            <strong>Budget:</strong>
+                            ₹9,000 / Person
+                        </p>
+
+                        <p>
+                            <strong>Couple:</strong>
+                            ₹17,000
+                        </p>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            4 Days
+                        </p>
+
+                        <p class="route-text">
+                            Hover Me to Know Route
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                class="btn btn-package"
+                                data-bs-toggle="modal"
+                                data-bs-target="#packageModal"
+                                data-destination="Darjeeling"
+                                data-cost="9000">
+                                Package Details
+                            </button>
+
+                            <button
+                                class="btn btn-description"
+                                data-bs-toggle="modal"
+                                data-bs-target="#descriptionModal"
+                                data-destination="Darjeeling">
+                                View Description
+                            </button>
+
+                            <button
+                                class="btn btn-ready"
+                                data-destination="Darjeeling"
+                                data-cost="9000">
+                                READY TO GO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 12 ANDAMAN
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 destination-wrapper">
+
+                <div
+                    class="destination-card"
+                    data-name="Andaman"
+                    data-season="Winter">
+
+                    <div class="image-box">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+                            alt="Andaman">
+
+                        <span class="image-rating">
+                            ⭐ 4.8
+                        </span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Andaman</h3>
+
+                        <p class="location-hover"
+                           data-country="India"
+                           data-location="Port Blair, Andaman">
+                            India
+                        </p>
+
+                        <p>
+                            <strong>Best Season:</strong>
+                            Winter
+                        </p>
+
+                        <p>
+                            <strong>Budget:</strong>
+                            ₹15,000 / Person
+                        </p>
+
+                        <p>
+                            <strong>Couple:</strong>
+                            ₹28,000
+                        </p>
+
+                        <p>
+                            <strong>Minimum:</strong>
+                            5 Days
+                        </p>
+
+                        <p class="route-text">
+                            Hover Me to Know Route
+                        </p>
+
+                        <div class="card-buttons">
+
+                            <button
+                                class="btn btn-package"
+                                data-bs-toggle="modal"
+                                data-bs-target="#packageModal"
+                                data-destination="Andaman"
+                                data-cost="15000">
+                                Package Details
+                            </button>
+
+                            <button
+                                class="btn btn-description"
+                                data-bs-toggle="modal"
+                                data-bs-target="#descriptionModal"
+                                data-destination="Andaman">
+                                View Description
+                            </button>
+
+                            <button
+                                class="btn btn-ready"
+                                data-destination="Andaman"
+                                data-cost="15000">
+                                READY TO GO
+                            </button>
 
                         </div>
 
@@ -238,43 +1596,1057 @@
 
         </div>
 
-    </section>
+
+        <p id="noResults"
+           class="text-center mt-5 d-none">
+
+            No destinations found.
+
+        </p>
+
+    </div>
+
+</section>
 
 
 
-    <!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     PACKAGE DETAILS MODAL
+===================================================== -->
 
-    <footer id="contact">
+<div class="modal fade"
+     id="packageModal"
+     tabindex="-1">
 
-        <div class="container">
+    <div class="modal-dialog modal-dialog-centered">
 
-            <h2>Travel<span>Escape</span></h2>
+        <div class="modal-content">
 
-            <p>
+            <div class="modal-header">
 
-                Explore India with unforgettable travel experiences.
+                <h5 class="modal-title">
+                    Package Details
+                </h5>
 
-            </p>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
 
-            <div class="social">
+            </div>
 
-                <i class="fab fa-facebook-f"></i>
 
-                <i class="fab fa-instagram"></i>
+            <div class="modal-body">
 
-                <i class="fab fa-twitter"></i>
+                <h4 id="packageDestination">
+                    Destination
+                </h4>
 
-                <i class="fab fa-youtube"></i>
+
+                <div class="mb-3">
+
+                    <label>
+                        Package Type
+                    </label>
+
+                    <select
+                        id="packageType"
+                        class="form-select">
+
+                        <option value="person">
+                            Person Package
+                        </option>
+
+                        <option value="couple">
+                            Couple Package
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label>
+                        Quantity
+                    </label>
+
+                    <input
+                        type="number"
+                        id="packageQuantity"
+                        class="form-control"
+                        value="1"
+                        min="1">
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label>
+                        Number of Days
+                    </label>
+
+                    <input
+                        type="number"
+                        id="packageDays"
+                        class="form-control"
+                        value="3"
+                        min="1">
+
+                </div>
+
+
+                <p>
+                    <strong>
+                        Accommodation:
+                    </strong>
+
+                    <span>
+                        Yes
+                    </span>
+                </p>
+
+
+                <p>
+                    <strong>
+                        Food:
+                    </strong>
+
+                    <span>
+                        Yes
+                    </span>
+                </p>
+
+
+                <p>
+                    <strong>
+                        Cost Per Unit:
+                    </strong>
+
+                    ₹<span id="packageCost">0</span>
+
+                </p>
+
+
+                <div class="total-box">
+
+                    Estimated Total:
+
+                    ₹<span id="estimatedCost">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
 
             </div>
 
         </div>
 
-    </footer>
+    </div>
+
+</div>
 
 
 
- 
-<script src="asset/js/index.js"></script>
+<!-- =====================================================
+     DESCRIPTION MODAL
+===================================================== -->
+
+<div class="modal fade"
+     id="descriptionModal"
+     tabindex="-1">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title"
+                    id="descriptionTitle">
+
+                    Destination
+
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <div id="destinationCarousel"
+                     class="carousel slide"
+                     data-bs-ride="false">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80"
+                                class="d-block w-100 description-image"
+                                alt="Destination">
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80"
+                                class="d-block w-100 description-image"
+                                alt="Travel">
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1000&q=80"
+                                class="d-block w-100 description-image"
+                                alt="Travel">
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=80"
+                                class="d-block w-100 description-image"
+                                alt="Travel">
+
+                        </div>
+
+                        <div class="carousel-item">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1000&q=80"
+                                class="d-block w-100 description-image"
+                                alt="Travel">
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#destinationCarousel"
+                        data-bs-slide="prev">
+
+                        <span class="carousel-control-prev-icon">
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#destinationCarousel"
+                        data-bs-slide="next">
+
+                        <span class="carousel-control-next-icon">
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <div class="description-content">
+
+                    <h5>
+                        About this destination
+                    </h5>
+
+                    <p id="destinationDescription">
+
+                        Explore beautiful landscapes,
+                        local culture and unforgettable
+                        experiences.
+
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            Best Time:
+                        </strong>
+
+                        October to March
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            Nearby Attractions:
+                        </strong>
+
+                        Local attractions, viewpoints,
+                        markets and cultural locations.
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            Travel Tips:
+                        </strong>
+
+                        Carry comfortable clothes,
+                        identification and basic medicines.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-ready"
+                    id="descriptionReadyBtn">
+
+                    READY TO GO
+
+                </button>
+
+                <button
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     BOOKING SECTION
+===================================================== -->
+
+<section id="booking"
+         class="booking-section section-padding d-none">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>
+                Start Your Journey
+            </p>
+
+            <h2>
+                Booking Form
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- BOOKING FORM -->
+
+            <div class="col-lg-7">
+
+                <div class="booking-card">
+
+                    <form id="bookingForm"
+                          novalidate>
+
+
+                        <div class="mb-3">
+
+                            <label>
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                class="form-control"
+                                placeholder="Enter your full name">
+
+                            <small
+                                id="nameError"
+                                class="error">
+                            </small>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label>
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                class="form-control"
+                                placeholder="example@email.com">
+
+                            <small
+                                id="emailError"
+                                class="error">
+                            </small>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label>
+                                Mobile Number
+                            </label>
+
+                            <input
+                                type="text"
+                                id="mobile"
+                                class="form-control"
+                                placeholder="10 digit mobile number">
+
+                            <small
+                                id="mobileError"
+                                class="error">
+                            </small>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label>
+                                Destination
+                            </label>
+
+                            <input
+                                type="text"
+                                id="bookingDestination"
+                                class="form-control"
+                                readonly>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <label>
+                                Number of Travelers
+                            </label>
+
+                            <input
+                                type="number"
+                                id="travelers"
+                                class="form-control"
+                                value="1"
+                                min="1">
+
+                            <small
+                                id="travelersError"
+                                class="error">
+                            </small>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <button
+                                type="button"
+                                class="btn btn-package w-100"
+                                id="choosePackageBtn">
+
+                                Choose Package
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="row g-3">
+
+
+                            <div class="col-md-6">
+
+                                <label>
+                                    Package Type
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="bookingPackage"
+                                    class="form-control"
+                                    readonly>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label>
+                                    Number of Days
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="bookingDays"
+                                    class="form-control"
+                                    readonly>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label>
+                                    Accommodation
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="bookingAccommodation"
+                                    class="form-control"
+                                    readonly>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label>
+                                    Food
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="bookingFood"
+                                    class="form-control"
+                                    readonly>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label>
+                                    Package Cost
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="bookingCost"
+                                    class="form-control"
+                                    readonly>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label>
+                                    Total Cost
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="bookingTotal"
+                                    class="form-control"
+                                    readonly>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mt-4">
+
+                            <button
+                                type="submit"
+                                class="btn submit-btn">
+
+                                Submit Booking
+
+                            </button>
+
+                            <button
+                                type="reset"
+                                class="btn reset-btn"
+                                id="resetBtn">
+
+                                Reset
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BOOKING SUMMARY -->
+
+            <div class="col-lg-5">
+
+                <div class="summary-card"
+                     id="bookingSummary">
+
+                    <h3>
+                        Booking Summary
+                    </h3>
+
+                    <hr>
+
+                    <p>
+                        Destination:
+                        <strong id="summaryDestination">
+                            -
+                        </strong>
+                    </p>
+
+                    <p>
+                        Travelers:
+                        <strong id="summaryTravelers">
+                            -
+                        </strong>
+                    </p>
+
+                    <p>
+                        Package:
+                        <strong id="summaryPackage">
+                            -
+                        </strong>
+                    </p>
+
+                    <p>
+                        Days:
+                        <strong id="summaryDays">
+                            -
+                        </strong>
+                    </p>
+
+                    <p>
+                        Accommodation:
+                        <strong id="summaryAccommodation">
+                            -
+                        </strong>
+                    </p>
+
+                    <p>
+                        Food:
+                        <strong id="summaryFood">
+                            -
+                        </strong>
+                    </p>
+
+                    <p>
+                        Package Cost:
+                        <strong id="summaryCost">
+                            -
+                        </strong>
+                    </p>
+
+                    <hr>
+
+                    <h4>
+                        Total:
+                        ₹<span id="summaryTotal">
+                            0
+                        </span>
+                    </h4>
+
+                </div>
+
+
+                <!-- CONFIRMATION CARD -->
+
+                <div
+                    id="confirmationCard"
+                    class="confirmation-card d-none">
+
+                    <h3>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Booking Confirmed
+                    </h3>
+
+                    <p>
+                        Have a wonderful journey!
+                    </p>
+
+                    <div id="confirmationDetails"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CHOOSE PACKAGE MODAL
+===================================================== -->
+
+<div class="modal fade"
+     id="choosePackageModal"
+     tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Choose Your Package
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+
+                <label>
+                    Package Type
+                </label>
+
+                <select
+                    id="choosePackageType"
+                    class="form-select mb-3">
+
+                    <option value="Person Package">
+                        Person Package
+                    </option>
+
+                    <option value="Couple Package">
+                        Couple Package
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Quantity
+                </label>
+
+                <input
+                    type="number"
+                    id="chooseQuantity"
+                    class="form-control mb-3"
+                    value="1"
+                    min="1">
+
+
+                <label>
+                    Number of Days
+                </label>
+
+                <select
+                    id="chooseDays"
+                    class="form-select mb-3">
+
+                    <option value="2">
+                        2 Days
+                    </option>
+
+                    <option value="3"
+                            selected>
+                        3 Days
+                    </option>
+
+                    <option value="4">
+                        4 Days
+                    </option>
+
+                    <option value="5">
+                        5 Days
+                    </option>
+
+                    <option value="6">
+                        6 Days
+                    </option>
+
+                </select>
+
+
+                <p>
+                    Accommodation:
+                    <strong>Included</strong>
+                </p>
+
+                <p>
+                    Food:
+                    <strong>Included</strong>
+                </p>
+
+
+                <p>
+                    Package Cost:
+                    ₹<span id="chooseCost">
+                        0
+                    </span>
+                </p>
+
+
+                <div class="total-box">
+
+                    Estimated Total:
+
+                    ₹<span id="chooseTotal">
+                        0
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-ready"
+                    id="chooseThisPackage">
+
+                    Choose This Package
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SUCCESS POPUP
+===================================================== -->
+
+<div class="modal fade"
+     id="successModal"
+     tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content text-center">
+
+            <div class="modal-body success-body">
+
+                <i class="bi bi-airplane-fill success-icon"></i>
+
+                <h2>
+                    Have a Wonderful Journey!
+                </h2>
+
+                <p>
+                    Your booking has been confirmed successfully.
+                </p>
+
+                <button
+                    class="btn btn-ready"
+                    data-bs-dismiss="modal">
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer id="contact">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-4">
+
+                <h3 class="footer-logo">
+                    <i class="bi bi-send-fill"></i>
+                    Travel<span>Vista</span>
+                </h3>
+
+                <p>
+                    Discover beautiful destinations
+                    and create unforgettable memories
+                    across India.
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-2">
+
+                <h5>
+                    Quick Links
+                </h5>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#topRated">
+                    Top Rated
+                </a>
+
+                <a href="#destinations">
+                    Destinations
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <h5>
+                    Popular Destinations
+                </h5>
+
+                <a href="#">
+                    Munnar
+                </a>
+
+                <a href="#">
+                    Goa
+                </a>
+
+                <a href="#">
+                    Manali
+                </a>
+
+                <a href="#">
+                    Kashmir
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <h5>
+                    Contact
+                </h5>
+
+                <p>
+                    <i class="bi bi-envelope"></i>
+                    travelvista@example.com
+                </p>
+
+                <p>
+                    <i class="bi bi-phone"></i>
+                    +91 98765 43210
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 TravelVista.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Custom JS -->
+
+<script src="asset/js/script.js"></script>
+
+
 </body>
 </html>
