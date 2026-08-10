@@ -1,28 +1,25 @@
-/* =====================================================
-   TRAVELVISTA - JS TASK 5
-===================================================== */
 
-
-/* =====================================================
-   1. CURRENT DATE & TIME
-===================================================== */
-
-window.addEventListener("load", function () {
-
-    const dateTime =
-        document.getElementById("currentDateTime");
-
+function updateDateTime() {
     const now = new Date();
 
-    dateTime.textContent =
-        now.toLocaleString();
+    const options = {
+        day: "numeric",
+        month: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+    };
 
-});
+    const dateTime = now.toLocaleString("en-IN", options);
 
+    document.getElementById("currentDateTime").textContent = dateTime;
+}
 
-/* =====================================================
-   2. EXPLORE DESTINATIONS BUTTON
-===================================================== */
+updateDateTime();
+setInterval(updateDateTime, 1000);
+
 
 const exploreBtn =
     document.getElementById("exploreBtn");
@@ -35,11 +32,6 @@ exploreBtn.addEventListener("click", function () {
         });
 
 });
-
-
-/* =====================================================
-   3. SEARCH DESTINATIONS
-===================================================== */
 
 const searchInput =
     document.getElementById("searchInput");
@@ -125,10 +117,6 @@ seasonFilter.addEventListener(
 );
 
 
-/* =====================================================
-   4. DESTINATION CARD SELECTION
-===================================================== */
-
 const destinationCards =
     document.querySelectorAll(".destination-card");
 
@@ -147,11 +135,6 @@ destinationCards.forEach(function (card) {
     });
 
 });
-
-
-/* =====================================================
-   5. COUNTRY HOVER
-===================================================== */
 
 const locations =
     document.querySelectorAll(".location-hover");
@@ -176,11 +159,6 @@ locations.forEach(function (location) {
         });
 
 });
-
-
-/* =====================================================
-   6. ROUTE INFORMATION
-===================================================== */
 
 const routeTexts =
     document.querySelectorAll(".route-text");
@@ -239,10 +217,6 @@ routeTexts.forEach(function (route) {
 });
 
 
-/* =====================================================
-   7. IMAGE DOUBLE CLICK
-===================================================== */
-
 const destinationImages =
     document.querySelectorAll(".image-box");
 
@@ -257,10 +231,6 @@ destinationImages.forEach(function (box) {
 
 });
 
-
-/* =====================================================
-   8. TOP RATED VIEW DETAILS
-===================================================== */
 
 const detailsButtons =
     document.querySelectorAll(".details-btn");
@@ -300,10 +270,6 @@ detailsButtons.forEach(function (button) {
 
 });
 
-
-/* =====================================================
-   9. PACKAGE DETAILS MODAL
-===================================================== */
 
 const packageButtons =
     document.querySelectorAll(".btn-package");
@@ -401,10 +367,6 @@ packageType.addEventListener(
 );
 
 
-/* =====================================================
-   10. DESCRIPTION MODAL
-===================================================== */
-
 const descriptionButtons =
     document.querySelectorAll(".btn-description");
 
@@ -441,11 +403,6 @@ descriptionButtons.forEach(function (button) {
         });
 
 });
-
-
-/* =====================================================
-   11. BOOKING VARIABLES
-===================================================== */
 
 const bookingSection =
     document.getElementById("booking");
@@ -495,10 +452,6 @@ let selectedDestination = "";
 
 let selectedBaseCost = 0;
 
-
-/* =====================================================
-   12. READY TO GO BUTTON
-===================================================== */
 
 const readyButtons =
     document.querySelectorAll(".btn-ready");
@@ -561,10 +514,6 @@ readyButtons.forEach(function (button) {
 });
 
 
-/* =====================================================
-   13. CHOOSE PACKAGE POPUP
-===================================================== */
-
 const choosePackageBtn =
     document.getElementById(
         "choosePackageBtn"
@@ -589,10 +538,6 @@ choosePackageBtn.addEventListener(
     }
 );
 
-
-/* =====================================================
-   14. CHOOSE PACKAGE CALCULATION
-===================================================== */
 
 const choosePackageType =
     document.getElementById(
@@ -679,10 +624,6 @@ chooseDays.addEventListener(
     calculateChoosePackage
 );
 
-
-/* =====================================================
-   15. CHOOSE THIS PACKAGE
-===================================================== */
 
 const chooseThisPackage =
     document.getElementById(
@@ -771,10 +712,6 @@ chooseThisPackage.addEventListener(
     });
 
 
-/* =====================================================
-   16. UPDATE BOOKING SUMMARY
-===================================================== */
-
 function updateBookingSummary() {
 
     document.getElementById(
@@ -850,10 +787,6 @@ travelers.addEventListener(
     }
 );
 
-
-/* =====================================================
-   17. FORM VALIDATION
-===================================================== */
 
 const bookingForm =
     document.getElementById(
@@ -1035,10 +968,6 @@ bookingForm.addEventListener(
 );
 
 
-/* =====================================================
-   18. BOOKING CONFIRMATION
-===================================================== */
-
 function showConfirmation() {
 
     const name =
@@ -1167,9 +1096,6 @@ function showConfirmation() {
 }
 
 
-/* =====================================================
-   19. RESET
-===================================================== */
 
 const resetBtn =
     document.getElementById(
