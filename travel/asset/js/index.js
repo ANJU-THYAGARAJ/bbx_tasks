@@ -367,6 +367,187 @@ packageType.addEventListener(
 );
 
 
+const destinations = {
+
+    Agra: {
+
+        description:
+            "Agra is a historic city in Uttar Pradesh and home to the magnificent Taj Mahal. Explore the Taj Mahal, Agra Fort and Mehtab Bagh while experiencing the rich Mughal history, architecture and culture of India.",
+
+        images: [
+            "img/agra1.jpg",
+            "img/agra2.jpg",
+            "img/agra3.jpg"
+        ]
+    },
+
+
+    Munnar: {
+
+        description:
+            "Munnar is a beautiful hill station in Kerala surrounded by tea plantations, misty mountains, waterfalls and green valleys. Enjoy trekking, sightseeing, photography and peaceful moments surrounded by nature.",
+
+        images: [
+            "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1000&q=80"
+        ]
+    },
+
+
+    Goa: {
+
+        description:
+            "Goa is a popular coastal destination famous for beautiful beaches, spectacular sunsets, water sports, Portuguese architecture and lively nightlife. It is ideal for relaxation, adventure and unforgettable beach experiences.",
+
+        images: [
+            "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1000&q=80"
+        ]
+    },
+
+
+    Manali: {
+
+        description:
+            "Manali is a scenic Himalayan destination surrounded by snow-covered mountains, green valleys and beautiful rivers. Visit Solang Valley, explore Old Manali and enjoy trekking, adventure activities and breathtaking mountain views.",
+
+        images: [
+            "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=80"
+        ]
+    },
+
+
+    Ponmudi: {
+
+        description:
+            "Ponmudi is a peaceful hill station in Kerala surrounded by misty mountains, lush forests, winding roads and beautiful valleys. It is a perfect destination for nature lovers, trekking enthusiasts and travelers looking for a quiet escape.",
+
+        images: [
+            "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80"
+        ]
+    },
+
+
+    Jaipur: {
+
+        description:
+            "Jaipur, the Pink City of Rajasthan, is famous for magnificent forts, royal palaces, colorful markets and traditional culture. Visit Amber Fort, Hawa Mahal and City Palace to experience the royal heritage of Rajasthan.",
+
+        images: [
+            "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=1000&q=80"
+        ]
+    },
+
+
+    Ooty: {
+
+        description:
+            "Ooty is a charming hill station in Tamil Nadu known for its cool climate, tea gardens, misty mountains and beautiful lakes. Enjoy the Nilgiri Mountain Railway, explore tea estates and experience the peaceful beauty of the hills.",
+
+        images: [
+            "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=1000&q=80"
+        ]
+    },
+
+
+    Kashmir: {
+
+        description:
+            "Kashmir is known as the Paradise on Earth, famous for snow-covered mountains, beautiful valleys, peaceful lakes and colorful gardens. Enjoy a shikara ride on Dal Lake, explore Srinagar and experience the breathtaking Himalayan scenery.",
+
+        images: [
+            "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=1000&q=80"
+        ]
+    },
+
+
+    Rishikesh: {
+
+        description:
+            "Rishikesh is a peaceful destination in Uttarakhand famous for the holy Ganges River, yoga, meditation, temples and exciting adventure activities. Enjoy river rafting, trekking, peaceful ashrams and beautiful views of the Himalayas.",
+
+        images: [
+            "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=1000&q=80"
+        ]
+    },
+
+
+    Alleppey: {
+
+        description:
+            "Alleppey, also known as Alappuzha, is famous for its beautiful backwaters, traditional houseboats and peaceful village landscapes. Enjoy a relaxing houseboat cruise, delicious Kerala food and stunning views of coconut trees and waterways.",
+
+        images: [
+            "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1602301278671-7e6e7c3b6b56?auto=format&fit=crop&w=1000&q=80"
+        ]
+    },
+
+
+    Darjeeling: {
+
+        description:
+            "Darjeeling is a beautiful hill station famous for its tea gardens, Himalayan views and the historic Darjeeling Himalayan Railway. Enjoy spectacular views of Kanchenjunga, peaceful monasteries and refreshing mountain air.",
+
+        images: [
+            "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1622308644420-b20142dc993c?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1578301978018-3005759f48f7?auto=format&fit=crop&w=1000&q=80"
+        ]
+    },
+
+
+    Andaman: {
+
+        description:
+            "The Andaman Islands are a tropical paradise famous for crystal-clear waters, white sandy beaches, coral reefs and beautiful islands. Enjoy snorkeling, scuba diving, island hopping and peaceful sunsets surrounded by nature.",
+
+        images: [
+            "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80",
+
+            "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1000&q=80"
+        ]
+    }
+
+};
+
 const descriptionButtons =
     document.querySelectorAll(".btn-description");
 
@@ -374,35 +555,107 @@ const descriptionTitle =
     document.getElementById("descriptionTitle");
 
 const destinationDescription =
-    document.getElementById(
-        "destinationDescription"
-    );
+    document.getElementById("destinationDescription");
+
+const descriptionImages =
+    document.getElementById("descriptionImages");
 
 
 descriptionButtons.forEach(function (button) {
 
-    button.addEventListener("click",
-        function () {
+    button.addEventListener("click", function () {
 
-            const destination =
-                this.getAttribute(
-                    "data-destination"
+        const destination =
+            this.getAttribute("data-destination");
+
+        const destinationData =
+            destinations[destination];
+
+
+        // Check destination
+        if (!destinationData) {
+
+            console.log(
+                "Destination not found:",
+                destination
+            );
+
+            return;
+        }
+
+
+        descriptionTitle.textContent =
+            destination;
+
+        destinationDescription.textContent =
+            destinationData.description;
+
+        descriptionImages.innerHTML = "";
+
+
+        destinationData.images
+            .slice(0, 3)
+            .forEach(function (image, index) {
+
+                const carouselItem =
+                    document.createElement("div");
+
+                carouselItem.classList.add(
+                    "carousel-item"
                 );
 
 
-            descriptionTitle.textContent =
-                destination;
+                // First image must be active
+                if (index === 0) {
+
+                    carouselItem.classList.add(
+                        "active"
+                    );
+
+                }
 
 
-            destinationDescription.textContent =
-                "Discover the beautiful landscapes, " +
-                "local culture, attractions and " +
-                "unforgettable experiences of " +
-                destination + ".";
+                const img =
+                    document.createElement("img");
 
-        });
+
+                img.src = image;
+
+                img.alt =
+                    destination + " destination";
+
+                img.classList.add(
+                    "d-block",
+                    "w-100",
+                    "description-image"
+                );
+
+
+                // Optional error handling
+                img.onerror = function () {
+
+                    console.log(
+                        "Image failed:",
+                        image
+                    );
+
+                };
+
+
+                carouselItem.appendChild(img);
+
+                descriptionImages.appendChild(
+                    carouselItem
+                );
+
+            });
+
+    });
 
 });
+
+
+
 
 const bookingSection =
     document.getElementById("booking");
